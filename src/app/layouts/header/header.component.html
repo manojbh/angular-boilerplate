@@ -1,0 +1,45 @@
+
+<mat-toolbar class="nav-shadow">
+    <div class="mobile-view">
+      <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <a class="navbar-brand mr-lg-5" [routerLink]="['/']">
+      <img src="./assets/img/logo.svg">
+    </a>
+
+    <div class="main_menu d-flex d-flex-row justify-content-between web-view w-100">
+        <ul class="gap-2 fs-6">
+          <li><a [routerLink]="['/']">Home</a></li>
+          <li><a>Page 1</a></li>
+          <li><a>Page 2</a></li>
+        </ul>
+        <ul class="gap-2 d-flex">
+          <li class="nav-item">
+            <ul class="languageClass">
+              <li (click)="switchLang(language)" *ngFor="let language of translate.getLangs()"
+                class="{{language === translate.currentLang?'active':''}}">{{ language | uppercase}}</li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-info" routerLinkActive="active" role="button" routerLink="/auth/register">{{'signup' |
+              translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-info" routerLinkActive="active" role="button" [routerLink]="['/auth/login']">{{'signin' |
+              translate}}</a>
+          </li>
+
+          <li class="nav-item">
+            <div>
+              <label class="icon-switcher mb-0" (click)="changeTheme()" [class.darkmode]="theme === 'darkMode'">
+                <div class="peg"></div>
+                <div class="bg"></div>
+              </label>
+            </div>
+          </li>
+        </ul>
+
+    </div>
+</mat-toolbar>

@@ -16,7 +16,8 @@ npm i
 1. Authentications
 2. Code Cleanup
 3. Tutorial on SSR Build
-4. ...
+4. Service Worker for PWA
+5. ...
 
 
 

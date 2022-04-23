@@ -26,6 +26,9 @@
       "@app/*": [
         "./src/app/*"
       ],
+      "@models/*": [
+        "./src/app/core/models/*"
+      ],
       "@env/*": [
         "./src/environments/*"
       ]

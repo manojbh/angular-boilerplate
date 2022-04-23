@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { translateBrowserLoaderFactory } from './shared/translate-browser.module';
+import { translateBrowserLoaderFactory } from '@app/shared/translate-browser.module';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -16,6 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './layouts/sidenav/sidenav.component';
+import { CoreModule, LoadingService } from '@app/core';
+import { SharedModule } from '@app/shared';
 
 @NgModule({
   declarations: [
@@ -39,13 +41,15 @@ import { SidenavComponent } from './layouts/sidenav/sidenav.component';
     }),
     BrowserTransferStateModule,
     HttpClientModule,
+    CoreModule,
+    SharedModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
     MatListModule
   ],
-  providers: [],
+  providers: [LoadingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class AppLoaderComponent implements OnInit {
   title!: string;
   message!: string;
-  constructor(public dialogRef: MatDialogRef<AppLoaderComponent>) {}
+  constructor(public dialogRef: MatDialogRef<AppLoaderComponent>) { }
 
   ngOnInit() {
   }

@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { ValidationService } from '../../services/validation.service';
 
 @Component({
-  selector: 'finnove-control-messages',
+  selector: 'app-control-messages',
   templateUrl: './control-messages.component.html',
   styleUrls: ['./control-messages.component.scss']
 })
@@ -13,7 +13,9 @@ export class ControlMessagesComponent {
   @Input()
   public labelName?: string;
 
-  constructor() {}
+  constructor() {
+    this.control = new FormControl;
+  }
 
   get errorMessage(): boolean {
     for (const propertyName in this.control.errors) {
@@ -26,6 +28,6 @@ export class ControlMessagesComponent {
       }
     }
 
-    return undefined;
+    return false;
   }
 }

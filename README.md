@@ -5,6 +5,7 @@ Angular Boilerplate with
 2. Choose Light or dark mode from header
 3. SSR Implementated 
 4. Responsive Navigation
+5. Authentication with Session or JWToken To choose from config.ts file in core folder
 
 ## Installation
 
@@ -13,7 +14,7 @@ npm i
 ```
 
 ## #TODO
-1. Authentications
+1. Authentications >> signup
 2. Code Cleanup
 3. Tutorial on SSR Build
 4. Service Worker for PWA
